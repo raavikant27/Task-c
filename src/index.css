@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Dashboard Design System - Modern & Clean */
+
+@layer base {
+  :root {
+    /* Base Colors - Professional Dashboard Theme */
+    --background: 240 10% 98%;
+    --foreground: 224 15% 20%;
+
+    /* Card System - Clean & Modern */
+    --card: 0 0% 100%;
+    --card-foreground: 224 15% 20%;
+    --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --card-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    /* Dashboard Specific Colors */
+    --dashboard-bg: 240 14% 96%;
+    --sidebar-bg: 0 0% 100%;
+    --widget-bg: 0 0% 100%;
+    --widget-border: 220 13% 91%;
+
+    /* Brand Colors - Professional Blue Palette */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 55%;
+    --primary-light: 217 100% 97%;
+
+    /* Status Colors - Dashboard Metrics */
+    --success: 142 76% 36%;
+    --success-light: 142 76% 95%;
+    --warning: 38 92% 50%;
+    --warning-light: 38 92% 95%;
+    --danger: 0 84% 60%;
+    --danger-light: 0 84% 95%;
+    --info: 199 89% 48%;
+    --info-light: 199 89% 95%;
+
+    /* Chart Colors - Data Visualization */
+    --chart-1: 217 91% 60%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 270 95% 75%;
+
+    /* Secondary System */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 15% 20%;
+
+    /* Muted System */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent System */
+    --accent: 217 100% 97%;
+    --accent-foreground: 217 91% 60%;
+
+    /* Destructive System */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border & Input */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    /* Radius System */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Professional Dashboard */
+    --background: 224 15% 12%;
+    --foreground: 220 20% 95%;
+
+    /* Dashboard Dark Colors */
+    --dashboard-bg: 224 15% 10%;
+    --sidebar-bg: 224 15% 14%;
+    --widget-bg: 224 15% 16%;
+    --widget-border: 224 15% 20%;
+
+    /* Cards Dark */
+    --card: 224 15% 16%;
+    --card-foreground: 220 20% 95%;
+    --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+    --card-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+
+    /* Brand Colors Dark */
+    --primary: 217 91% 65%;
+    --primary-foreground: 224 15% 12%;
+    --primary-hover: 217 91% 70%;
+    --primary-light: 217 91% 20%;
+
+    /* Status Colors Dark */
+    --success: 142 76% 45%;
+    --success-light: 142 76% 15%;
+    --warning: 38 92% 55%;
+    --warning-light: 38 92% 15%;
+    --danger: 0 84% 65%;
+    --danger-light: 0 84% 15%;
+    --info: 199 89% 55%;
+    --info-light: 199 89% 15%;
+
+    /* Secondary Dark */
+    --secondary: 224 15% 20%;
+    --secondary-foreground: 220 20% 95%;
+
+    /* Muted Dark */
+    --muted: 224 15% 20%;
+    --muted-foreground: 220 15% 60%;
+
+    /* Accent Dark */
+    --accent: 224 15% 20%;
+    --accent-foreground: 217 91% 65%;
+
+    /* Destructive Dark */
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 220 20% 95%;
+
+    /* Border & Input Dark */
+    --border: 224 15% 25%;
+    --input: 224 15% 25%;
+    --ring: 217 91% 65%;
+
+    /* Sidebar Dark */
+    --sidebar-background: 224 15% 14%;
+    --sidebar-foreground: 220 20% 90%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 224 15% 12%;
+    --sidebar-accent: 224 15% 18%;
+    --sidebar-accent-foreground: 220 20% 90%;
+    --sidebar-border: 224 15% 22%;
+    --sidebar-ring: 217 91% 65%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Professional animations and transitions */
+  .animate-in {
+    animation: fadeInUp 0.3s ease-out;
+  }
+
+  .animate-out {
+    animation: fadeOutDown 0.3s ease-in;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOutDown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+
+  /* Smooth hover transitions */
+  .hover-lift {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow-lg);
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}
