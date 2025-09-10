@@ -135,10 +135,3 @@ This project is connected to GitHub for version control and collaboration:
 2. **Local Development** - Clone and develop locally, push changes to sync back
 3. **Collaboration** - Use GitHub for team collaboration and code reviews
 
-## License
-
-This project is built with Lovable and is ready for production use.
-
-
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [React Documentation](https://react.dev/)om-domain#step-by-step-guide)
